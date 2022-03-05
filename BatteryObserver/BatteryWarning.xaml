@@ -1,0 +1,13 @@
+﻿<Window x:Class="BatteryObserver.BatteryWarning"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BatteryObserver"
+        mc:Ignorable="d"
+        Title="BatteryWarning" Height="141.664" Width="254.711">
+    <Grid>
+        <Button Content="OK" HorizontalAlignment="Left" Height="40" Margin="55,56,0,0" VerticalAlignment="Top" Width="138" FontSize="14"/>
+        <TextBox Height="27" Margin="10,10,10,0" TextWrapping="Wrap" Text="Batterie schwach" VerticalAlignment="Top" FontSize="14" HorizontalContentAlignment="Center"/>
+    </Grid>
+</Window>

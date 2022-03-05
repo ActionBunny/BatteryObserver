@@ -1,0 +1,2 @@
+M:\GitHub\BatteryObserver\BatteryObserver\bin\Debug\BatteryObserver.exe
+M:\GitHub\BatteryObserver\BatteryObserver\bin\Debug\BatteryObserver.exe.config

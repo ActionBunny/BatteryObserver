@@ -1,0 +1,17 @@
+M:\GitHub\BatteryObserver\BatteryObserver\bin\Debug\BatteryObserver.exe.config
+M:\GitHub\BatteryObserver\BatteryObserver\bin\Debug\BatteryObserver.exe
+M:\GitHub\BatteryObserver\BatteryObserver\bin\Debug\BatteryObserver.pdb
+M:\GitHub\BatteryObserver\BatteryObserver\obj\Debug\BatteryObserver.csprojAssemblyReference.cache
+M:\GitHub\BatteryObserver\BatteryObserver\obj\Debug\MainWindow.g.cs
+M:\GitHub\BatteryObserver\BatteryObserver\obj\Debug\App.g.cs
+M:\GitHub\BatteryObserver\BatteryObserver\obj\Debug\BatteryObserver_MarkupCompile.cache
+M:\GitHub\BatteryObserver\BatteryObserver\obj\Debug\BatteryObserver_MarkupCompile.lref
+M:\GitHub\BatteryObserver\BatteryObserver\obj\Debug\MainWindow.baml
+M:\GitHub\BatteryObserver\BatteryObserver\obj\Debug\BatteryObserver.g.resources
+M:\GitHub\BatteryObserver\BatteryObserver\obj\Debug\BatteryObserver.Properties.Resources.resources
+M:\GitHub\BatteryObserver\BatteryObserver\obj\Debug\BatteryObserver.csproj.GenerateResource.cache
+M:\GitHub\BatteryObserver\BatteryObserver\obj\Debug\BatteryObserver.csproj.CoreCompileInputs.cache
+M:\GitHub\BatteryObserver\BatteryObserver\obj\Debug\BatteryObserver.exe
+M:\GitHub\BatteryObserver\BatteryObserver\obj\Debug\BatteryObserver.pdb
+M:\GitHub\BatteryObserver\BatteryObserver\obj\Debug\BatteryWarning.g.cs
+M:\GitHub\BatteryObserver\BatteryObserver\obj\Debug\BatteryWarning.baml

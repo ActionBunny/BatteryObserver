@@ -1,0 +1,6 @@
+M:\GitHub\BatteryObserver\SetupProject1\bin\Debug\BatteryObserver.msi
+M:\GitHub\BatteryObserver\SetupProject1\bin\Debug\BatteryObserver.wixpdb
+obj\Debug\Product.wixobj
+obj\Debug\SetupProject1.wixproj.BindContentsFileListnull.txt
+obj\Debug\SetupProject1.wixproj.BindOutputsFileListnull.txt
+obj\Debug\SetupProject1.wixproj.BindBuiltOutputsFileListnull.txt

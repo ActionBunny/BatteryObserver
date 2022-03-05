@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi"><?define BatteryObserver_TargetDir=$(var.BatteryObserver.TargetDir)?>
+	<Product Id="50ca2b58-d868-4bb2-b34f-8f112333ca18" Name="BatteryObserver" Language="1033" Version="1.0.0.0" Manufacturer="Tobias Menzel" UpgradeCode="0b4155af-28c3-4447-b7c2-fe83f7636879">
+		<Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" />      
+    
+    <UIRef Id="WixUI_Minimal" />
+    
+		<MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
+    <MediaTemplate EmbedCab="yes"/>
+
+		<Feature Id="ProductFeature" Title="BatteryObserver" Level="1">
+			<ComponentGroupRef Id="ProductComponents" />
+		</Feature>
+	</Product>
+
+	<Fragment>
+		<Directory Id="TARGETDIR" Name="SourceDir">
+			<Directory Id="ProgramFilesFolder">
+				<Directory Id="INSTALLFOLDER" Name="BatteryObserver" />
+			</Directory>
+		</Directory>
+	</Fragment>
+
+	<Fragment>
+		<ComponentGroup Id="ProductComponents" Directory="INSTALLFOLDER">
+			<!-- TODO: Remove the comments around this Component element and the ComponentRef below in order to add resources to this installer. -->
+			<!-- <Component Id="ProductComponent"> -->
+				<!-- TODO: Insert files, registry keys, and other resources here. -->
+			<!-- </Component> -->
+			<Component Id="BatteryObserver.exe" Guid="50679972-46f6-4f76-aee1-85bf28d77caa">
+			  <File Id="BatteryObserver.exe" Name="BatteryObserver.exe" Source="$(var.BatteryObserver_TargetDir)BatteryObserver.exe" />
+			</Component>
+			<Component Id="BatteryObserver.exe.config" Guid="47f975f0-51b7-44f7-a15b-8c8a15d5314b">
+			  <File Id="BatteryObserver.exe.config" Name="BatteryObserver.exe.config" Source="$(var.BatteryObserver_TargetDir)BatteryObserver.exe.config" />
+			</Component>
+		</ComponentGroup>
+	</Fragment>
+</Wix>
