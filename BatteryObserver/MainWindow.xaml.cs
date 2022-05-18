@@ -12,14 +12,9 @@ namespace BatteryObserver
     /// </summary>
     public partial class MainWindow : Window
     {
-          public MainWindow()
+        public MainWindow()
         {
             InitializeComponent();
-
-            PowerStatus pwr = SystemInformation.PowerStatus;
-
-            //System.Windows.Forms.MessageBox.Show("State: " + pwr.BatteryChargeStatus.ToString() + " Charge: " + pwr.BatteryLifePercent.ToString());
-
             SystemEvents.PowerModeChanged += new PowerModeChangedEventHandler(SystemEvents_PowerModeChanged);
         }
 
@@ -28,7 +23,7 @@ namespace BatteryObserver
             var xml = @"<toast>
                     <visual>
                         <binding template=""ToastImageAndText04"">
-                            <image id=""1"" src=""file:///M:\GitHub\BatteryObserver\BatteryObserver\wurm.png"" alt=""wurm""/>
+                            <image id=""1"" src=""C:\Program Files (x86)\BatteryObserver\wurm.png"" alt=""wurm""/>
                             <text id=""1"">Batterie fast leer...</text>
                             <text id=""2"">Jetzt aber schnell wurmen.</text>
                             <text id=""3""></text>
@@ -47,7 +42,7 @@ namespace BatteryObserver
             var xml = @"<toast>
                     <visual>
                         <binding template=""ToastImageAndText04"">
-                            <image id=""1"" src=""file:///M:\GitHub\BatteryObserver\BatteryObserver\wurm.png"" alt=""wurm""/>
+                            <image id=""1"" src=""C:\Program Files (x86)\BatteryObserver\wurm.png"" alt=""wurm""/>
                             <text id=""1"">Batterie ganz doll leer...</text>
                             <text id=""2"">Jetzt aber ganz ganz schnell wurmen.</text>
                             <text id=""3""></text>
@@ -63,22 +58,38 @@ namespace BatteryObserver
 
         void SystemEvents_PowerModeChanged(object sender, PowerModeChangedEventArgs e)
         {
-            
-
-            switch (SystemInformation.PowerStatus.BatteryChargeStatus)
+            string str = SystemInformation.PowerStatus.BatteryChargeStatus.ToString();
+            bool result = str.Contains("Charging");
+            if (result == true)
             {
-                case System.Windows.Forms.BatteryChargeStatus.Low:
-                    //System.Windows.Forms.MessageBox.Show("Battery is running low.", "Low Battery");
-                    lowBatteryToast();
-                    break;
-                case System.Windows.Forms.BatteryChargeStatus.Critical:
-                    //System.Windows.Forms.MessageBox.Show("Battery is critcally low.", "Critical Battery");
-                    criticalBatteryToast();
-                    break;
-                default:
-                    //System.Windows.MessageBox.Show("Debug: BatteryChargeStatus changed");
-                    break;
             }
-        }
+            else
+            { 
+                if (SystemInformation.PowerStatus.BatteryLifePercent <= 0.1)
+                {
+                    criticalBatteryToast();
+                }
+                else if(SystemInformation.PowerStatus.BatteryLifePercent <= 0.2)
+                {
+                    lowBatteryToast();
+                }
+            }
+        //showMessage();
+        //System.Windows.Forms.MessageBox.Show(SystemInformation.PowerStatus.BatteryChargeStatus.ToString(), "Low Battery", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+        //switch (SystemInformation.PowerStatus.BatteryChargeStatus)
+        //{
+        //    case System.Windows.Forms.BatteryChargeStatus.Low:
+        //        //System.Windows.Forms.MessageBox.Show("Battery is running low.", "Low Battery");
+        //        lowBatteryToast();
+        //        break;
+        //    case System.Windows.Forms.BatteryChargeStatus.Critical:
+        //        //System.Windows.Forms.MessageBox.Show("Battery is critcally low.", "Critical Battery");
+        //        criticalBatteryToast();
+        //        break;
+        //    default:
+        //        //System.Windows.MessageBox.Show("Debug: BatteryChargeStatus changed");
+        //        break;
+        //}
+    }
     }
 }
